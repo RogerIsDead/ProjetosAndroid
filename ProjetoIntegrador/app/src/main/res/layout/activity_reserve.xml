@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+  <TextView
+      android:id="@+id/tvSelectCardTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Selecione um cartão:"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"/>
+
+  <ListView
+      android:id="@+id/lvCards"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintTop_toBottomOf="@id/tvSelectCardTitle"
+      app:layout_constraintBottom_toTopOf="@id/tvCarName"
+      app:layout_constraintHeight_percent="0.4"/>
+
+  <TextView
+      android:id="@+id/tvCarName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintTop_toBottomOf="@id/lvCards"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp"/>
+
+  <TextView
+      android:id="@+id/tvTotalValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      app:layout_constraintTop_toBottomOf="@id/tvCarName"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="8dp"/>
+
+  <TextView
+      android:id="@+id/tvDays"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      app:layout_constraintTop_toBottomOf="@id/tvTotalValue"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="8dp"/>
+
+  <Button
+      android:id="@+id/btnConfirmReservation"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Confirmar Reserva"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
